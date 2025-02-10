@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Str;
+use App\Models\Category;
+use App\Models\RecipePhoto;
+use App\Models\RecipeIngredient;
 
 class Recipe extends Model
 {

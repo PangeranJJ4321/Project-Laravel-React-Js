@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Relations\HasMany; 
+use App\Models\Recipe;
 use Illuminate\Support\Str;
 
 class Category extends Model
@@ -25,6 +27,6 @@ class Category extends Model
 
     public function recipes(): HasMany
     {
-        return $this->hasMany(Recipes::class);
+        return $this->hasMany(Recipe::class);
     }
 }

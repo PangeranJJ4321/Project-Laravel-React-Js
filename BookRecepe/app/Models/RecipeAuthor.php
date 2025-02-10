@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Recipe;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class RecipeAuthor extends Model
 {
@@ -22,6 +24,6 @@ class RecipeAuthor extends Model
      */
     public function recipes(): HasMany
     {
-        return $this->hasMany(Recipes::class);
+        return $this->hasMany(Recipe::class);
     }
 }
