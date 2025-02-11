@@ -25,13 +25,13 @@ const CategoryFilter = () => {
 
     // console.log(categories);
 
-    if (loading) {
-        return <p className="flex items-center justify-between px-5">Loading ...</p>
-    }
+    // if (loading) {
+    //     return <p className="flex items-center justify-between px-5">Loading ...</p>
+    // }
 
-    if (error) {
-        return <p>Error loading data : {error}</p>
-    }
+    // if (error) {
+    //     return <p>Error loading data : {error}</p>
+    // }
     
     return (
         <section id="Categories" className="mt-[30px]">
