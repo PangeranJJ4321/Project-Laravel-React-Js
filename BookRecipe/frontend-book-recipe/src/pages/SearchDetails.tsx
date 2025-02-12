@@ -1,10 +1,10 @@
 import { useSearchParams } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import ButtomNav from "../components/home/ButtomNav";
-import Navbar from "../components/home/Navbar";
+import Navbar from "../components/Navbar";
 import SearchForm from "../components/home/SearchForm";
-import SearchResult from "../components/search/SearchResult";
 import { SearchContext } from "../context/SearchContext";
+import RecipeList from "../components/ListRecipes";
 
 const SearchDetails = () => {
     const { searchResults, loading, error, performSearch } = useContext(SearchContext);
@@ -19,9 +19,9 @@ const SearchDetails = () => {
 
     return (
         <>
-            <Navbar />
+            <Navbar showNotification={true} />
             <SearchForm />
-            <SearchResult searchResults={searchResults} loading={loading} error={error} />
+            <RecipeList title="Search Results" recipes={searchResults} loading={loading} error={error} />
             <ButtomNav />
         </>
     );

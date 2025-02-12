@@ -30,9 +30,9 @@ const CategoryFilter = () => {
     //     return <p className="flex items-center justify-between px-5">Loading ...</p>
     // }
 
-    // if (error) {
-    //     return <p>Error loading data : {error}</p>
-    // }
+    if (error) {
+        return <p>Error loading data : {error}</p>
+    }
     
     return (
         <section id="Categories" className="mt-[30px]">
@@ -50,12 +50,17 @@ const CategoryFilter = () => {
                 <Swiper 
                     className="w-full mt-3" direction="horizontal" spaceBetween={16} slidesPerView="auto" slidesOffsetBefore={20} slidesOffsetAfter={20}
                 
-                >   
-                    {categories.map( (category) => (
-                        <SwiperSlide key={category.id} className="!w-fit pb-[30px]">
-                            <CategoryCard category={category}/>
-                        </SwiperSlide>
-                    ))}
+                >  
+
+                    {categories.length > 0 ? (
+                        categories.map( (category) => (
+                            <SwiperSlide key={category.id} className="!w-fit pb-[30px]">
+                                 <CategoryCard category={category}/>
+                            </SwiperSlide>
+                        ))
+                    ) : (
+                        <p className="text-center font-bold">Memuat category...</p>
+                    )}
                     
                 </Swiper>
             </div>

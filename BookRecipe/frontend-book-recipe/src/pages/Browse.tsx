@@ -1,14 +1,14 @@
 import 'swiper/swiper-bundle.css';
-import Navbar from "../components/home/Navbar";
+import Navbar from "../components/Navbar";
 import SearchForm from "../components/home/SearchForm";
-import RecipeSlide from "../components/home/RecipeSlide/RecipeSlide";
 import ButtomNav from "../components/home/ButtomNav";
 import CategoryFilter from '../components/home/categoriFilter/CategoryFilter';
+import RecipeSlide from '../components/RecipesSlide';
 
 export default function Browse() {
     return (
        <>
-            <Navbar />
+            <Navbar showNotification={true} />
             <SearchForm />
             <CategoryFilter />
             <RecipeSlide />
