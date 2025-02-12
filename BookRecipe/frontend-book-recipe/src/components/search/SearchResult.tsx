@@ -1,4 +1,5 @@
 import { baseURL, Recipe } from "../../types/Type";
+import Loading from "../Loading";
 
 interface SearchResultProps {
     searchResults: Recipe[];
@@ -13,9 +14,7 @@ const SearchResult: React.FC<SearchResultProps> = ({ searchResults, loading, err
         <section id="SearchResult" className="px-5 mt-[30px]">
 
             {loading ? (
-                <div className="flex items-center justify-center">
-                    <h2 className="font-bold">Loading ...</h2>
-                </div>
+                <Loading />
             ) : searchResults.length > 0 ? (
                 <div className="flex items-center justify-start">
                     <h2 className="font-bold">Search Results ({searchResults.length})</h2>

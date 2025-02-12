@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Category } from "../../../types/Type";
 import CategoryCard from "./CategoryCard";
+import Loading from "../../Loading";
 
 
 const CategoryFilter = () => {
@@ -35,11 +36,15 @@ const CategoryFilter = () => {
     
     return (
         <section id="Categories" className="mt-[30px]">
-            {!loading && 
+            {loading ? (
+                <Loading />
+            ) : (
                 <div className="flex items-center justify-between px-5">
                     <h2 className="font-bold">By Categories</h2>
                 </div>
+            )
             }
+
             <div className="swiper w-full mt-3">
                 {/* nanti setelah membuat componen home, kita buat Swiper jadi componenn baru */}
                 <Swiper 
