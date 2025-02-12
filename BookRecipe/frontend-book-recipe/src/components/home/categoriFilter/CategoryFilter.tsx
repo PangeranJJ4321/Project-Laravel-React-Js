@@ -35,24 +35,26 @@ const CategoryFilter = () => {
     
     return (
         <section id="Categories" className="mt-[30px]">
-        <div className="flex items-center justify-between px-5">
-            <h2 className="font-bold">By Categories</h2>
-        </div>
-        <div className="swiper w-full mt-3">
-            {/* nanti setelah membuat componen home, kita buat Swiper jadi componenn baru */}
-            <Swiper 
-                className="w-full mt-3" direction="horizontal" spaceBetween={16} slidesPerView="auto" slidesOffsetBefore={20} slidesOffsetAfter={20}
-            
-            >   
-                {categories.map( (category) => (
-                    <SwiperSlide key={category.id} className="!w-fit pb-[30px]">
-                        <CategoryCard category={category}/>
-                    </SwiperSlide>
-                ))}
+            {!loading && 
+                <div className="flex items-center justify-between px-5">
+                    <h2 className="font-bold">By Categories</h2>
+                </div>
+            }
+            <div className="swiper w-full mt-3">
+                {/* nanti setelah membuat componen home, kita buat Swiper jadi componenn baru */}
+                <Swiper 
+                    className="w-full mt-3" direction="horizontal" spaceBetween={16} slidesPerView="auto" slidesOffsetBefore={20} slidesOffsetAfter={20}
                 
-            </Swiper>
-        </div>
-    </section>
+                >   
+                    {categories.map( (category) => (
+                        <SwiperSlide key={category.id} className="!w-fit pb-[30px]">
+                            <CategoryCard category={category}/>
+                        </SwiperSlide>
+                    ))}
+                    
+                </Swiper>
+            </div>
+        </section>
     );
 }
 
