@@ -1,26 +1,37 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+
+
 const Header = () => {
     return (
         <header id="Gallery" className="relative w-full h-[520px] flex shrink-0 rounded-b-[40px] bg-black overflow-hidden">
             <div className="swiper">
                 <div className="swiper-wrapper">
-                    <div className="swiper-slide">
-                        <div className="relative w-full h-full flex shrink-0">
-                            <div className="gradient-filter absolute w-full h-full bg-[linear-gradient(180deg,rgba(0,0,0,0)40.47%,#000000_81.6%)] z-10"></div>
-                            <img src="/assets/images/thumbnails/thumbnail-2.png" className="w-full h-full object-cover" alt="thumbnail"/>
-                        </div>
-                    </div>
-                    <div className="swiper-slide">
-                        <div className="relative w-full h-full flex shrink-0">
-                            <div className="gradient-filter absolute w-full h-full bg-[linear-gradient(180deg,rgba(0,0,0,0)40.47%,#000000_81.6%)] z-10"></div>
-                            <img src="/assets/images/thumbnails/thumbnail-1.png" className="w-full h-full object-cover" alt="thumbnail"/>
-                        </div>
-                    </div>
-                    <div className="swiper-slide">
-                        <div className="relative w-full h-full flex shrink-0">
-                            <div className="gradient-filter absolute w-full h-full bg-[linear-gradient(180deg,rgba(0,0,0,0)40.47%,#000000_81.6%)] z-10"></div>
-                            <img src="/assets/images/thumbnails/thumbnail-3.png" className="w-full h-full object-cover" alt="thumbnail"/>
-                        </div>
-                    </div>
+                    <Swiper
+                        className="w-full"
+                        direction="horizontal"
+                        slidesPerView="auto"
+                        slidesOffsetBefore={20}
+                        slidesOffsetAfter={20}
+                    >                       
+                        <SwiperSlide>
+                            <div className="relative w-full h-full flex shrink-0">
+                                <div className="gradient-filter absolute w-full h-full bg-[linear-gradient(180deg,rgba(0,0,0,0)40.47%,#000000_81.6%)] z-10"></div>
+                                <img src="/assets/images/thumbnails/thumbnail-2.png" className="w-full h-full object-cover" alt="thumbnail"/>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="relative w-full h-full flex shrink-0">
+                                <div className="gradient-filter absolute w-full h-full bg-[linear-gradient(180deg,rgba(0,0,0,0)40.47%,#000000_81.6%)] z-10"></div>
+                                <img src="/assets/images/thumbnails/thumbnail-1.png" className="w-full h-full object-cover" alt="thumbnail"/>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="relative w-full h-full flex shrink-0">
+                                <div className="gradient-filter absolute w-full h-full bg-[linear-gradient(180deg,rgba(0,0,0,0)40.47%,#000000_81.6%)] z-10"></div>
+                                <img src="/assets/images/thumbnails/thumbnail-3.png" className="w-full h-full object-cover" alt="thumbnail"/>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
             </div>
             <div className="absolute bottom-0 w-full flex flex-col gap-5 z-20">
