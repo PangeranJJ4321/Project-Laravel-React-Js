@@ -1,16 +1,16 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { baseURL, Recipe } from "../../types/Type";
+import Loading from "../Loading";
 
 interface HeaderRecipeProps {
-    recipe: Recipe | null; // Ubah dari array ke single object
+    recipe: Recipe | null; 
 }
 
 const HeaderRecipe: React.FC<HeaderRecipeProps> = ({ recipe }) => {
     
-    const thumbnails = recipe?.photos || ["/assets/images/thumbnails/thumbnail-1.png"];
     return (
         <header id="Gallery" className="relative w-full h-[520px] flex shrink-0 rounded-b-[40px] bg-black overflow-hidden">
-            <Swiper className="w-full" direction="horizontal" slidesPerView="auto" slidesOffsetBefore={20} slidesOffsetAfter={20}>
+            <Swiper className="w-full" direction="horizontal"slidesPerView="auto" slidesOffsetAfter={20}>
                 {recipe?.photos.map((photo,index) => (
                     <SwiperSlide key={index}>
                         <div className="relative w-full h-full flex shrink-0">

@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import { baseURL, Recipe } from "../../../types/Type";
 
 const RecipeCard = ({recipe} : {recipe : Recipe}) => {
     return (
-        <a href="" className="card">
+        <Link to={`/recipe/${recipe.slug}`} className="card">
             <div className="relative w-[200px] h-[280px] rounded-[30px] bg-white overflow-hidden">
                 <img src={`${baseURL}/${recipe.thumbnail}`}className="absolute w-full h-full object-cover" alt="thumbnails" />
                 <div className="gradient-filter absolute w-full h-full bg-[linear-gradient(180deg,rgba(0,0,0,0)40.47%,#000000_81.6%)] z-10"></div>
@@ -17,7 +18,7 @@ const RecipeCard = ({recipe} : {recipe : Recipe}) => {
                     </div>
                 </div>
             </div>               
-        </a>
+        </Link>
     );
 }
 
