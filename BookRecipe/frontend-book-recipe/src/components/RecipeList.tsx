@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { baseURL, Recipe } from "../types/Type";
 import Loading from "./Loading";
 
@@ -29,7 +30,7 @@ const RecipeList: React.FC<RecipeListProps> = ({ title, recipes = [], loading = 
             {!loading && recipes.length > 0 && (
                 <div className="flex flex-col gap-[18px] mt-[18px]">
                     {recipes.map((recipe) => (
-                        <a key={recipe.id} href={`/recipe/${recipe.id}`} className="card">
+                        <Link key={recipe.id} to={`/recipe/${recipe.slug}`} className="card">
                             <div className="flex rounded-[20px] p-[14px] gap-[14px] bg-white shadow-[0_12px_30px_0_#D6D6D640] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FF4C1C80]">
                                 <div className="flex shrink-0 w-[100px] h-20 rounded-[20px] overflow-hidden bg-[#D9D9D9]">
                                     <img 
@@ -49,7 +50,7 @@ const RecipeList: React.FC<RecipeListProps> = ({ title, recipes = [], loading = 
                                     <p className="text-sm leading-[21px] text-[#848486]">By {recipe.author.name}</p>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             )}
