@@ -43,7 +43,7 @@ export interface Recipe {
     author: Author,
     category: Category,
     thumbnail: string,
-    tutorials: Tutorial[],
+    tutorials?: Tutorial[],
     recipe_ingredients: RecipeIngredient[],
     about: string,
     photos: Photos[],
