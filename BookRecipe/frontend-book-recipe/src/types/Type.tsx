@@ -34,6 +34,11 @@ interface Photos {
     photo: string,
 }
 
+interface Reviews {
+    id: number,
+    comment: string,
+}
+
 export interface Recipe {
     id: string,
     name: string,
@@ -47,6 +52,7 @@ export interface Recipe {
     recipe_ingredients: RecipeIngredient[],
     about: string,
     photos: Photos[],
+    reviews?: Reviews[],
 }
 
 export const baseURL = "http://127.0.0.1:8000/storage";
