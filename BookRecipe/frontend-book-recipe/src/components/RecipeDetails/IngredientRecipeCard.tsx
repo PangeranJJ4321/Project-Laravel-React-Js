@@ -1,15 +1,25 @@
-const IngredientRecipeCard = () => {
+import React from "react";
+import { baseURL, Recipe } from "../../types/Type";
+
+interface IngredientRecipeCardProps {
+    recipe: Recipe | null; 
+}
+
+
+const IngredientRecipeCard: React.FC<IngredientRecipeCardProps> = ({recipe}) => {
     return (
         <div className="grid grid-cols-2 gap-5">
-            <div className="flex flex-col items-center text-center w-full rounded-[20px] p-[14px] gap-[14px] bg-white shadow-[0_12px_30px_0_#D6D6D680]">
+            {recipe?.recipe_ingredients.map((recipeIngredient) => (
+            <div key={recipeIngredient.id} className="flex flex-col items-center text-center w-full rounded-[20px] p-[14px] gap-[14px] bg-white shadow-[0_12px_30px_0_#D6D6D680]">
                 <div className="thumbnail flex shrink-0 w-full aspect-[138.5/100] rounded-[20px] bg-[#D9D9D9] overflow-hidden">
-                    <img src="/assets/images/thumbnails/thumbnails-ingredients-1.png" className="w-full h-full object-cover" alt="thumbnails" />
+                    <img src={`${baseURL}/${recipeIngredient.ingredient.photo}`} className="w-full h-full object-cover" alt={recipeIngredient.ingredient.name} />
                 </div>
                 <div className="flex flex-col gap-[2px]">
-                    <p className="font-semibold">Big Meats</p>
-                    <p className="text-sm leading-[21px] text-[#848486]">1 kilogram</p>
+                    <p className="font-semibold">{recipeIngredient.ingredient.name}</p>
+                    <p className="text-sm leading-[21px] text-[#848486]">secukupnya</p>
                 </div>
             </div>
+            ))}
         </div>
     );
 }

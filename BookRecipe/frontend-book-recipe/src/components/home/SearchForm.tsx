@@ -42,7 +42,7 @@ const SearchForm: React.FC = () => {
                 <button onClick={handleSearch} className="flex shrink-0 w-[42px] h-[42px]">
                     <img src="/assets/images/icons/search.svg" alt="icon" />
                 </button>
-            </div>
+            </div> 
         </div>
     );
 }

@@ -1,21 +1,26 @@
-import { JSX, useState } from "react";
+import React, { JSX, useState } from "react";
 import ButtonDetail from "./ButtonDetail";
 import { Swiper, SwiperSlide } from "swiper/react";
 import IngredientRecipeCard from "./IngredientRecipeCard";
 import TutorialRecipe from "./TutorialRecipe";
 import ReviewRecipe from "./ReviewRecipe";
+import { Recipe } from "../../types/Type";
 
-const tabContents: Record<string, JSX.Element> = {
-    Ingredients: <IngredientRecipeCard />, 
-    Tutorials: <TutorialRecipe />, 
-    Reviews: <ReviewRecipe />,
-};
+interface ListDetailsProps {
+    recipe: Recipe | null; 
+}
 
-const ListDetails = () => {
+const ListDetails: React.FC<ListDetailsProps> = ({ recipe }) => {
     const [activeTab, setActiveTab] = useState<string>('Ingredients');
 
     const handleTabClick = (tab: string) => {
         setActiveTab(tab);
+    };
+
+    const tabContents: Record<string, JSX.Element> = {
+        Ingredients: recipe ? <IngredientRecipeCard recipe={recipe} /> : <p>No Ingredients Available</p>, 
+        Tutorials: recipe? <TutorialRecipe recipe={recipe} /> : <p>No Tutorials Available</p>, 
+        Reviews: recipe? <ReviewRecipe recipe={recipe} /> : <p>No Review Available</p>,
     };
 
     return (

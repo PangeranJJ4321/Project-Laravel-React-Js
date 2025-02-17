@@ -1,4 +1,10 @@
-const ReviewRecipe = () => {
+import { Recipe } from "../../types/Type";
+
+interface ReviewRecipeProps {
+    recipe: Recipe | null; 
+}
+
+const ReviewRecipe: React.FC<ReviewRecipeProps> = ({recipe}) => {
     return (
         <div className="flex flex-col gap-5">
             <div className="review-card flex flex-col pb-5 border-b border-[#E7E7E7] gap-3">

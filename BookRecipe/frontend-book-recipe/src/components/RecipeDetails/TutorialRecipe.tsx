@@ -1,4 +1,11 @@
-const TutorialRecipe = () => {
+import React from "react";
+import { Recipe } from "../../types/Type";
+
+interface TutorialRecipeProps {
+    recipe: Recipe | null; 
+}
+
+const TutorialRecipe: React.FC<TutorialRecipeProps> = ({recipe}) => {
     return (
         <>
             <iframe className="w-full aspect-video rounded-[20px] bg-[#D9D9D9]" src="https://www.youtube.com/embed/n1YeqIlbkxc" />

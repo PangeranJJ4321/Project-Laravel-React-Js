@@ -5,7 +5,7 @@ import RecipeSlide from "../components/RecipesSlide";
 import { useEffect, useState } from "react";
 import { Category } from "../types/Type";
 import axios from "axios";
-import RecipeList from "../components/ListRecipes";
+import RecipeList from "../components/RecipeList";
 import Navbar from "../components/Navbar";
 
 

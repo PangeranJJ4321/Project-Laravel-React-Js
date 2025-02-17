@@ -4,7 +4,7 @@ import ButtomNav from "../components/home/ButtomNav";
 import Navbar from "../components/Navbar";
 import SearchForm from "../components/home/SearchForm";
 import { SearchContext } from "../context/SearchContext";
-import RecipeList from "../components/ListRecipes";
+import RecipeList from "../components/RecipeList";
 
 const SearchDetails = () => {
     const { searchResults, loading, error, performSearch } = useContext(SearchContext);

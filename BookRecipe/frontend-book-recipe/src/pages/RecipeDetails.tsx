@@ -34,7 +34,7 @@ const RecipeDetails = () => {
         return (
             <div className="flex flex-col items-center justify-center h-screen mt-3">
                 <Loading />
-                <p className="mt-4 text-lg font-semibold text-gray-600">Memuat</p>
+                <p className="mt-4 text-lg font-semibold text-gray-600">Memuat detail recipe</p>
             </div>
         );
     }
@@ -59,7 +59,7 @@ const RecipeDetails = () => {
             <Navbar title="" showBackButton={true} showMoreButton={true} />
             <HeaderRecipe recipe={recipe}/>
             <About recipe={recipe} />
-            <ListDetails />
+            <ListDetails recipe={recipe} />
             <DownloadRecipe />
 
         </>
