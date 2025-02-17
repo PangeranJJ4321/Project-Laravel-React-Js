@@ -60,7 +60,7 @@ const RecipeDetails = () => {
             <HeaderRecipe recipe={recipe}/>
             <About recipe={recipe} />
             <ListDetails recipe={recipe} />
-            <DownloadRecipe />
+            <DownloadRecipe recipe={recipe}/>
 
         </>
     );
