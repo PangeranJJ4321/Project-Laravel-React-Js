@@ -17,4 +17,4 @@ Route::apiResource('/categories', CategoryController::class);
 
 
 Route::get('/recipe/{recipe:slug}', [RecipeController::class, 'show']);
-Route::apiResource('/recipes', RecipeController::class);
+Route::apiResource('/recipes', RecipeController::class); 
