@@ -37,7 +37,7 @@ const CategoryDetails = () => {
             <Header category={category} loading={loading} error={error} />
             <RecipeSlide slug={slug} />
             <RecipeList title="Latest Recipes" recipes={category?.recipes} loading={loading} error={error} />
-            <BottomNav />
+            {/* <BottomNav /> */}
         </>
     );
 }
