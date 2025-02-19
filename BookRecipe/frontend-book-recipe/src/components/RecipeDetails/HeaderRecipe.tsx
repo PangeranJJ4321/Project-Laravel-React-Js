@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { baseURL, Recipe } from "../../types/Type";
-import Loading from "../Loading";
 
 interface HeaderRecipeProps {
     recipe: Recipe | null; 

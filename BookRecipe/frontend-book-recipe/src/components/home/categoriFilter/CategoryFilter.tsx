@@ -13,7 +13,11 @@ const CategoryFilter = () => {
 
 
     useEffect( () => {
-        axios.get('http://127.0.0.1:8000/api/categories')
+        axios.get('http://127.0.0.1:8000/api/categories', {
+            headers : {
+                'dapurpangeran' : '28c6082ca87fa002c35c46c4a97ff9ff'
+            }
+        })
         .then(response => {
             setCategories(response.data.data);
             setLoading(false);

@@ -18,7 +18,11 @@ const RecipeDetails = () => {
 
     useEffect(() => {
         console.log("Fetching recipe for slug:", slug);
-        axios.get(`http://127.0.0.1:8000/api/recipe/${slug}`)
+        axios.get(`http://127.0.0.1:8000/api/recipe/${slug}`, {
+            headers : {
+                'dapurpangeran' : '28c6082ca87fa002c35c46c4a97ff9ff'
+            }
+        })
         .then((response) => {
             setRecipe(response.data.data);
             setLoading(false);

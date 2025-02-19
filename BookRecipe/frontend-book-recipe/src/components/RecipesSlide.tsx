@@ -21,7 +21,13 @@ const RecipeSlide = ({ slug }: RecipeSlideProps) => {
             ? `http://127.0.0.1:8000/api/category/${slug}` 
             : `http://127.0.0.1:8000/api/recipes`;
 
-        axios.get(endpoint)
+        axios
+            .get(endpoint, {
+                headers : {
+                    'dapurpangeran' : '28c6082ca87fa002c35c46c4a97ff9ff'
+                }
+            })
+            
             .then(response => {
                 if (slug) {
                     // Jika slug ada, ambil data dari kategori

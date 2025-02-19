@@ -31,7 +31,11 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         setError(null);
     
         try {
-            const response = await axios.get(`http://127.0.0.1:8000/api/recipes/search?query=${encodeURIComponent(query)}`);
+            const response = await axios.get(`http://127.0.0.1:8000/api/recipes/search?query=${encodeURIComponent(query)}`, {
+                headers : {
+                    'dapurpangeran' : '28c6082ca87fa002c35c46c4a97ff9ff'
+                }
+            });
             setSearchResults(response.data.data);
         } catch (error: any) {
             setError(axios.isAxiosError(error) ? error.response?.data?.message || 'Error searching for recipes' : 'An unexpected error occurred');
