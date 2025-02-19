@@ -1,7 +1,7 @@
 import 'swiper/swiper-bundle.css';
 import Navbar from "../components/Navbar";
 import SearchForm from "../components/home/SearchForm";
-import ButtomNav from "../components/home/ButtomNav";
+import ButtomNav from "../components/home/BottomNav";
 import CategoryFilter from '../components/home/categoriFilter/CategoryFilter';
 import RecipeSlide from '../components/RecipesSlide';
 

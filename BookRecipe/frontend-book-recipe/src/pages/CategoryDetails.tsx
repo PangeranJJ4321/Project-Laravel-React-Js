@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
 import Header from "../components/category-details/Header";
-import ButtomNav from "../components/home/ButtomNav";
 import RecipeSlide from "../components/RecipesSlide";
 import { useEffect, useState } from "react";
 import { Category } from "../types/Type";
 import axios from "axios";
 import RecipeList from "../components/RecipeList";
 import Navbar from "../components/Navbar";
+import BottomNav from "../components/home/BottomNav";
 
 
 const CategoryDetails = () => {
@@ -37,7 +37,7 @@ const CategoryDetails = () => {
             <Header category={category} loading={loading} error={error} />
             <RecipeSlide slug={slug} />
             <RecipeList title="Latest Recipes" recipes={category?.recipes} loading={loading} error={error} />
-            <ButtomNav />
+            <BottomNav />
         </>
     );
 }

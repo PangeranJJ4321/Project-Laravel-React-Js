@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import { useContext, useEffect } from "react";
-import ButtomNav from "../components/home/ButtomNav";
+import ButtomNav from "../components/home/BottomNav";
 import Navbar from "../components/Navbar";
 import SearchForm from "../components/home/SearchForm";
 import { SearchContext } from "../context/SearchContext";
