@@ -17,6 +17,8 @@ Repositori ini berisi kumpulan proyek yang menggabungkan **Laravel** sebagai bac
 ✅ Detail resep lengkap dengan bahan dan langkah-langkah  
 ✅ Pencarian cepat untuk menemukan resep berdasarkan nama atau bahan  
 
+🔹 **Penasaran? Lihat gambaran proyek di sini:** [👀 Klik untuk melihat!](https://pangeranjj4321.github.io/daily/2) 🔥  
+
 ---
 
 ### **2. RenOffice 🏢📅**  
@@ -27,6 +29,7 @@ Repositori ini berisi kumpulan proyek yang menggabungkan **Laravel** sebagai bac
 ✅ Detail lengkap setiap ruang kantor (harga, fasilitas, kapasitas)  
 ✅ Sistem booking untuk reservasi ruang kantor
 
+🔹 **Penasaran? Lihat gambaran proyek di sini:** Belum Ada😝😝😝  
 
 ## 🚀 Cara Menjalankan (Aku belum Tahu)
 
