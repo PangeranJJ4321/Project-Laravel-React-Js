@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
+use App\Models\OfficeSpacePhoto;
+use App\Models\OfficeSpaceBenefit;
+use App\Models\BookingTransaction;
 
 class OfficeSpace extends Model
 {
