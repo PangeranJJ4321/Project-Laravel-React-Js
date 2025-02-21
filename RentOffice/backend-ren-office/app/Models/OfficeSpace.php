@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 use App\Models\OfficeSpacePhoto;
 use App\Models\OfficeSpaceBenefit;
 use App\Models\BookingTransaction;
+use App\Models\City;
 
 class OfficeSpace extends Model
 {

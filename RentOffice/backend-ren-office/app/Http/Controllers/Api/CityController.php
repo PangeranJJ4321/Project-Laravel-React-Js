@@ -11,7 +11,7 @@ class CityController extends Controller
 {
     public function index()
     {
-        $cities = City::withCount('officeSpace')->get();
+        $cities = City::withCount('officeSpaces')->get();
         return CityResource::collection($cities);
     }
 
