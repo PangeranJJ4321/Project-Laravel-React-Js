@@ -17,7 +17,7 @@ Repositori ini berisi kumpulan proyek yang menggabungkan **Laravel** sebagai bac
 ✅ Detail resep lengkap dengan bahan dan langkah-langkah  
 ✅ Pencarian cepat untuk menemukan resep berdasarkan nama atau bahan  
 
-🔹 **Penasaran? Lihat gambaran proyek di sini:** [👀 Klik untuk melihat!](https://pangeranjj4321.github.io/daily/2) 🔥  
+🔹 **Penasaran? Lihat gambaran proyek di sini:** [👀 Klik untuk melihat!](http://pangeranjj4321.github.io/daily/2) 🔥  
 
 ---
 
