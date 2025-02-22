@@ -1,0 +1,46 @@
+interface Photo {
+    id: number;
+    photo: string;
+}
+
+interface Benefit {
+    id: number;
+    benefit: string;
+}
+
+
+export interface Office {
+    id: number,
+    price: number,
+    duration: number,
+    name: string,
+    slug: string,
+    city: string,
+    thumbnail: string,
+    photos: Photo[],
+    benefits: Benefit[],
+    about: string,
+}
+
+export interface City {
+    id: number;
+    name: string;
+    slug: string;
+    photo: string;
+    officeSpaces_count: number;
+    officeSpaces: Office[];
+}
+
+export interface BookingDetails {
+    id: number,
+    name: string,
+    photo_number: string,
+    booking_trx_id: string,
+    is_paid: boolean,
+    duration: number,
+    started_at: string,
+    ended_at: string,
+    office: Office,
+}
+
+export const baseURL = "http://127.0.0.1:8000/storage";
