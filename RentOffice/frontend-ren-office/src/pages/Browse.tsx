@@ -6,6 +6,7 @@ import ListOffices from "../components/home/ListOffices";
 import NavBar from "../components/home/NavBar";
 import { City } from "../types/Type";
 import axios from "axios";
+import Loading from "../components/Loading";
 
 
 const Browse = () => {
@@ -31,24 +32,34 @@ const Browse = () => {
         
     }, []);
 
-    if (loading) return <p>Loading...</p>;
 
-    if (error) return <p>Error loading data : {error}</p>
+
+
+    if (error) {
+        return (
+            <div className="flex items-center justify-center min-h-screen text-red-500">
+                <p>Error loading data: {error}</p>
+            </div>
+        );
+    }
+
 
     return (
         <>
-            <NavBar />
-
-            <HeroBanner />
-
-            <CarauselCity cities={cities}/>
-
-            <BenefitsContent />
-
-            <ListOffices />
-             
+            {loading ? (
+                <Loading title="Memuat"/>
+            ) : (
+                <>
+                    <NavBar />
+                    <HeroBanner />
+                    <CarauselCity cities={cities} />
+                    <BenefitsContent />
+                    <ListOffices />
+                </>
+            )}
         </>
     );
+    
 }
 
 export default Browse;
