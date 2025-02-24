@@ -15,10 +15,10 @@ export interface Office {
     duration: number,
     name: string,
     slug: string,
-    city: string,
+    city: City,
     thumbnail: string,
     photos: Photo[],
-    benefits: Benefit[],
+    benefits: Benefit,
     about: string,
 }
 
